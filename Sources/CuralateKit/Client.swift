@@ -92,13 +92,15 @@ open class Client: NSObject {
     ) {
         let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) in
-            if error != nil {
-                print("Error making request: \(error?.localizedDescription ?? "Unknown error")")
+            if let error = error {
+                print("Error making request: \(error.localizedDescription)")
+                completion((error as NSError).code, nil)
                 return
             }
             if let httpResponse = response as? HTTPURLResponse {
                 completion(httpResponse.statusCode, data)
             } else {
+                completion(0, nil)
                 print("Error making request: no response")
             }
         })

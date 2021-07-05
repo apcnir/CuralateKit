@@ -5,6 +5,6 @@
 import Foundation
 
 public struct CuralateAPIError: Error {
-    let code: Int
-    let msg: String?
+    public let code: Int
+    public let msg: String?
 }
