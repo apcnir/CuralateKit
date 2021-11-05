@@ -378,7 +378,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "$(ARCHS_STANDARD) x86_64";
+				VALID_ARCHS = "x86_64 arm64 armv7 x86_64-apple-ios-simulator";
 			};
 			name = Debug;
 		};
@@ -409,7 +409,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
-				VALID_ARCHS = "$(ARCHS_STANDARD) x86_64";
+				VALID_ARCHS = "x86_64 arm64 armv7 x86_64-apple-ios-simulator";
 			};
 			name = Release;
 		};
@@ -439,6 +439,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = CuralateKit;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -469,6 +470,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = CuralateKit;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
